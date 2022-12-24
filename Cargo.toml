@@ -1,0 +1,11 @@
+[package]
+name = "pixoo64-cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pixoo64 = { git = "https://github.com/punkystone/pixoo64" }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+clap = { version = "4.0.32", features = ["derive"] }
