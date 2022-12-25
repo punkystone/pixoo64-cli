@@ -9,3 +9,10 @@ edition = "2021"
 pixoo64 = { git = "https://github.com/punkystone/pixoo64" }
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
 clap = { version = "4.0.32", features = ["derive"] }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
